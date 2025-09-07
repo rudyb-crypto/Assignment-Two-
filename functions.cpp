@@ -15,18 +15,19 @@
 
 /*****************************************************/
 /* Function:   strlength                             */
-/* Inputs:     none                                  */
-/* Outputs:    none                                  */
-/* Purpose:    keeps track of the string length      */
-/*                                                   */
+/* Inputs:     const char* str (input string)        */
+/* Outputs:    int (length of the string)            */
+/* Purpose:    Counts the characters in a string     */
+/*             until the null terminator             */
 /*****************************************************/
-int strlength(const char *str){
-	if (str == nullptr) return 0;
-	int length = 0;
-	while (str[length] != '\0'){
-		length++;
-	}
-	return length;
+int strlength(const char *str) {
+    int length = 0;
+    if (str != nullptr) {
+        while (str[length] != '\0') {
+            length++;
+        }
+    }
+    return length;
 }
 
 /*****************************************************/
