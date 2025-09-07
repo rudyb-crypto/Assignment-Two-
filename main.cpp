@@ -7,6 +7,15 @@
 #include <stdio.h>
 #include "functions.h"
 
+
+/*****************************************************/
+/* Function:   main                                  */
+/* Inputs:     string                                */
+/* Outputs:    string length                         */
+/* Purpose:    Displays the file string length       */
+/*             and parameters.                       */
+/*****************************************************/
+
 int main(int argc, char** argv) {
     printf("The program name is '%s'\n", get_filename(argv[0]));
     printf("The length of the program name is %d\n", strlength(get_filename(argv[0])));
