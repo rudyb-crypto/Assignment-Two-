@@ -2,10 +2,10 @@
  * This comment header was added by gitbash command promt
  **********************/
 
-#ifndef COMMANDLINE_FUNCTIONS_H
-#define COMMANDLINE_FUNCTIONS_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
 int strlength(const char*);
 
-#endif //COMMANDLINE_FUNCTIONS_H
+#endif //FUNCTIONS_H
 

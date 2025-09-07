@@ -11,15 +11,15 @@
 #endif //COMMNADLINE_FUNCTIONS_H
 
 int strlength(const char *str){
-	
-	return 0;
+	int length = 0;
+	while (str[length] != '\0'){
+		length++;
+	}
+	return length;
 }
 
 
-void strlength()
-{
-	
-}
+
 
 
 	
