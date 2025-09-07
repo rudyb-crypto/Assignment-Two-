@@ -13,6 +13,13 @@
 
 #endif //COMMNADLINE_FUNCTIONS_H
 
+/*****************************************************/
+/* Function:   strlength                             */
+/* Inputs:     none                                  */
+/* Outputs:    none                                  */
+/* Purpose:    keeps track of the string length      */
+/*                                                   */
+/*****************************************************/
 int strlength(const char *str){
 	if (str == nullptr) return 0;
 	int length = 0;
@@ -22,6 +29,14 @@ int strlength(const char *str){
 	return length;
 }
 
+/*****************************************************/
+/* Function:   get_filename                          */
+/* Inputs:     none                                  */
+/* Outputs:    none                                  */
+/* Purpose:    goes through the ring to find last /  */
+/* or \ updating last_separator to point to the char */
+/* after last separator                              */
+/*****************************************************/
 const char* get_filename(const char *path) {
     if (path == nullptr) return ""; // Return empty string for null input
     const char *last_separator = path;
