@@ -32,23 +32,24 @@ int strlength(const char *str) {
 
 /*****************************************************/
 /* Function:   get_filename                          */
-/* Inputs:     none                                  */
-/* Outputs:    none                                  */
-/* Purpose:    goes through the ring to find last /  */
-/* or \ updating last_separator to point to the char */
-/* after last separator                              */
+/* Inputs:     const char* path (file path)          */
+/* Outputs:    const char* (pointer to file name)    */
+/* Purpose:    Returns a pointer to the file name    */
+/*             after the last / or \ separator       */
 /*****************************************************/
 const char* get_filename(const char *path) {
-    if (path == nullptr) return ""; // Return empty string for null input
-    const char *last_separator = path;
-    int i = 0;
-    while (path[i] != '\0') {
-        if (path[i] == '/' || path[i] == '\\') { // Check for both / and \ for portability
-            last_separator = path + i + 1; // Point to character after separator
+    const char *result = "";
+    if (path != nullptr) {
+        result = path;
+        int i = 0;
+        while (path[i] != '\0') {
+            if (path[i] == '/' || path[i] == '\\') {
+                result = path + i + 1;
+            }
+            i++;
         }
-        i++;
     }
-    return last_separator;
+    return result;
 }
 
 
