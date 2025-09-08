@@ -10,10 +10,12 @@
 
 /*****************************************************/
 /* Function:   main                                  */
-/* Inputs:     string                                */
-/* Outputs:    string length                         */
-/* Purpose:    Displays the file string length       */
-/*             and parameters.                       */
+/* Inputs:     int argc (argument count),            */
+/*             char** argv (argument vector)         */
+/* Outputs:    int (exit status)                     */
+/* Purpose:    Displays the program name, its length,*/
+/*             number of command-line parameters,    */
+/*             and lengths of each parameter         */
 /*****************************************************/
 
 int main(int argc, char** argv) {
